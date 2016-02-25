@@ -1,1 +1,4 @@
-# inspire
+Inspire
+=======
+
+BaseKit Template

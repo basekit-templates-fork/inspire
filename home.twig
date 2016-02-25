@@ -1,0 +1,73 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include "includes/header.twig" %}
+
+<div class="homepage-feature">
+	{{widget('feature', 'featurehome', {
+		"header": "profile",
+		"strapline": "profile",
+		"defaultBgImg": asset('images/feature-bg.jpg'),
+		'positionTopPercentage': '0',
+		'showBtn': true,
+		buttonText: "Lorem Ipsum"
+	})|raw}}
+</div>
+
+<div class="homepage-signup">
+	{{widget('signupform', 'emailsignup', {
+	  'text': 'Submit',
+	  'label': 'Start inspiring others today!',
+	  'formTitle': 'Signup Form',
+	  'email': 'profile'
+	})|raw}}
+</div>
+
+<div class="homepage-images container">
+	{{widget('image', 'img1', {
+	  'src': asset("images/join-us.png"),
+	  'title': 'JOIN US',
+	  'description': 'Lorem ipsum dolor sit amet',
+	  'align': 'widget-align-center'
+	})|raw}}
+
+	{{widget('image', 'img2', {
+	  'src': asset("images/volunteer.png"),
+	  'title': 'VOLUNTEER',
+	  'description': 'Vivem est lupus dormet sont',
+	  'align': 'widget-align-center'
+	})|raw}}
+
+	{{widget('image', 'img3', {
+	  'src': asset("images/donate.png"),
+	  'title': 'DONATE',
+	  'description': 'Lares magnus somedant sarpe',
+	  'align': 'widget-align-center'
+	})|raw}}
+
+</div>
+
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Page Content -->
+	<section class="template-content">
+
+		<!-- Template Widgets -->
+
+		<!-- End Template Widgets -->
+
+		<!-- Main Widet Zone -->
+	   	{{zone('main')|raw}}
+
+	</section>
+	<!-- End Page Content -->
+
+</div>
+<!-- End Container -->
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}
