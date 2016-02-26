@@ -18,11 +18,11 @@
 // 1. #FORK STYLES
 // -------------------------------------------
 
-// Homepage Signup Form
-// -------------------------------------------
+// Homepage Signup Form in Header & Profile Signup Form in Footer
+// --------------------------------------------------------------
+
 .homepage-signup .signupform .form {
     background-color: lighten(@color__primary, 20%);
-    border: none;
     .form-body {
         width: 100%;
         margin: 30px auto;
@@ -30,6 +30,25 @@
         padding-left: 5%;
         padding-right: 5%;
     }
+}
+
+.template-footer .signupform .form {
+    background-color: transparent;
+    .form-body {
+        width: 100%;
+        margin: 5px auto;
+    }
+    .button {
+        background-color: lighten(@color__button--background, 20%);
+        &:hover {
+            background-color: @color__button--background--hover;
+        }
+    }
+}
+
+.homepage-signup .signupform .form,
+.template-footer .signupform .form {
+    border: none;
     .label {
         color: @color__body--background;
         font-family: @font__h3--font-family;
@@ -51,8 +70,9 @@
     }
 }
 
-// Add flexbox to signup form
-.homepage-signup .signupform__form-body {
+// Add flexbox to signup form in Header and Footer
+.homepage-signup .signupform__form-body,
+.template-footer .signupform__form-body {
 
     .flex(@display: flex);
     .flex-wrap(@wrap: nowrap);
@@ -74,12 +94,17 @@
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
+        @media @mobile {
+            -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100% !important;
+        }
     }
 }
 
 // Nested flexbox in signup form for label and input
-.homepage-signup .signupform .form-group:first-child {
-
+.homepage-signup .signupform .form-group:first-child,
+.template-footer .signupform .form-group:first-child {
     .flex(@display: flex);
     .flex-wrap(@wrap: wrap);
     .justify-content(@justify: flex-end);
@@ -103,6 +128,9 @@
             min-width: inherit;
             margin-left: 0;
             text-align: center;
+            -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
         }
     }
 }
@@ -347,8 +375,22 @@
     a {
         padding: 0;
     }
-    .signupform .form-body {
-        width: 100%;
+    p.address-line {
+        display: inline-block;
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @media @mobile {
+        .col1,
+        .col2 {
+            width: 100%;
+        }
+        .profile__signupform {
+            min-width: inherit;
+            max-width: inherit;
+        }
     }
 }
 
