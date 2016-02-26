@@ -453,6 +453,15 @@ button.navigation-toggle {
         display: block;
     }
     @media only screen and (min-width: 768px) {
+        .col1 {
+            .twitter__tweet-wrap {
+                text-align: left;
+            }
+            .twitter__avatar {
+                display: block;
+                float: left;
+            }
+        }
         .col2 {
             .twitter__tweet-wrap {
                 text-align: right;
@@ -460,6 +469,18 @@ button.navigation-toggle {
             .twitter__avatar {
                 display: block;
                 float: right;
+            }
+        }
+    }
+    @media @mobile {
+        .col1,
+        .col2 {
+            .twitter__tweet-wrap {
+                text-align: center;
+            }
+            .twitter__avatar {
+                display: block;
+                float: inherit;
             }
         }
     }
