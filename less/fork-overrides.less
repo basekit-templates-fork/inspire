@@ -24,20 +24,51 @@ button.navigation-toggle {
     background-color: transparent;
 }
 
-// Homepage Signup Form in Header & Profile Signup Form in Footer
-// --------------------------------------------------------------
+// Feature
 
-.homepage-signup .signupform .form {
-    background-color: lighten(@color__primary, 20%);
-    .form-body {
-        width: 100%;
-        margin: 30px auto;
-        max-width: 1300px;
-        padding-left: 5%;
-        padding-right: 5%;
+@media only screen and (min-width: 768px) {
+    .feature__background-image {
+        height: 800px;
+        min-height: 800px;
+    }
+    .feature__content-wrap {
+        padding-bottom: 105px;
     }
 }
 
+// Homepage Signup Form in Header & Profile Signup Form in Footer
+// --------------------------------------------------------------
+
+// Homepage Signup form on Header
+.homepage-feature {
+    position: relative;
+    .homepage-signup {
+        .form {
+            background-color: lighten(@color-swatch4, 20%);
+        }
+        .form-body {
+            width: 100%;
+            margin: 30px auto;
+            max-width: 1300px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        // Transparent background on Desktop
+        @media only screen and (min-width: 768px) {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            .form {
+            background-color: hsla(hue(@color-swatch4),
+                       saturation(@color-swatch4),
+                       lightness(@color-swatch4),
+                       0.6);
+            }
+        }
+    }
+}
+
+// Profile Form in Footer
 .template-footer .signupform .form {
     background-color: transparent;
     .form-body {
@@ -62,6 +93,7 @@ button.navigation-toggle {
     }
 }
 
+// Style for Signup Form in Header and Footer
 .homepage-signup .signupform .form,
 .template-footer .signupform .form {
     border: none;
