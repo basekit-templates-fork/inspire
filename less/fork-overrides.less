@@ -388,18 +388,23 @@ button.navigation-toggle {
     .flex(@display: flex);
     .flex-wrap(@wrap: wrap);
     .justify-content(@justify: center);
-    .align-items(@align: flex-start);
+    .align-items(@align: stretch);
     .align-content(@align: space-between);
 }
 
 .twitter__tweet-item,
 .twitter__tweet-item:last-child {
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    -webkit-flex: 1 1 32%;
+    -ms-flex: 1 1 32%;
+    flex: 1 1 32%;
     border: 1px solid @color-swatch7;
     padding: 30px;
     margin: 5px;
+    @media @mobile {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
 }
 
 // Profile Widgets on Footer
