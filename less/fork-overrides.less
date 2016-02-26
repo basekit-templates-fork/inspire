@@ -183,9 +183,14 @@ button.navigation-toggle {
     .align-content(@align: space-between);
 
     .widget {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
+        -webkit-flex: 1 1 32%;
+        -ms-flex: 1 1 32%;
+        flex: 1 1 32%;
+        @media @mobile {
+            -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+        }
     }
 }
 
