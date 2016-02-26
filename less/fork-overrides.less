@@ -18,6 +18,12 @@
 // 1. #FORK STYLES
 // -------------------------------------------
 
+// Nav
+
+button.navigation-toggle {
+    background-color: transparent;
+}
+
 // Homepage Signup Form in Header & Profile Signup Form in Footer
 // --------------------------------------------------------------
 
@@ -36,13 +42,23 @@
     background-color: transparent;
     .form-body {
         width: 100%;
-        margin: 5px auto;
+        margin: 0 auto;
     }
     .button {
         background-color: lighten(@color__button--background, 20%);
         &:hover {
             background-color: @color__button--background--hover;
         }
+    }
+}
+
+.template-footer .profile__signupform {
+    @media @tablet {
+        margin: 0 auto;
+    }
+    @media @mobile {
+        min-width: inherit;
+        max-width: inherit;
     }
 }
 
@@ -370,16 +386,8 @@
         .justify-content(@justify: space-between);
         .align-items(@align: flex-start);
         .align-content(@align: flex-start);
-    }
-    p,
-    a {
-        padding: 0;
-    }
-    p.address-line {
-        display: inline-block;
-        margin-right: 5px;
-        &:last-child {
-            margin-right: 0;
+        @media @tablet {
+            .justify-content(@justify: center);
         }
     }
     @media @mobile {
@@ -387,9 +395,43 @@
         .col2 {
             width: 100%;
         }
-        .profile__signupform {
-            min-width: inherit;
-            max-width: inherit;
+    }
+    .profile {
+        margin: 10px auto;
+    }
+    p,
+    a {
+        padding: 0;
+    }
+    // Address
+    p.address-line {
+        display: inline-block;
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    // Twitter
+    .twitter {
+        padding: 0;
+    }
+    .twitter__tweet-item {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    .twitter__avatar {
+        display: block;
+    }
+    @media only screen and (min-width: 768px) {
+        .col2 {
+            .twitter__tweet-wrap {
+                text-align: right;
+            }
+            .twitter__avatar {
+                display: block;
+                float: right;
+            }
         }
     }
 }
