@@ -68,6 +68,10 @@ button.navigation-toggle {
     }
 }
 
+.feature__headline {
+    max-width: 50%;
+}
+
 // Profile Form in Footer
 .template-footer .signupform .form {
     background-color: transparent;
@@ -293,7 +297,7 @@ button.navigation-toggle {
     .post-content {
         .flex-order(@order: 1);
 
-        padding: 20px 40px;
+        padding: 40px 40px;
     }
 
     // Read Button
@@ -400,6 +404,9 @@ button.navigation-toggle {
 .blogpost__post-title:after {
     display: none;
 }
+.blogpostlist__title-link {
+    color: @font-swatch4-color;
+}
 .blogpostlist__post-header {
     margin: 0 auto;
 }
@@ -440,6 +447,21 @@ button.navigation-toggle {
         flex: 1 1 100%;
     }
 }
+
+.twitter__account-link {
+    color: @font-swatch4-color;
+}
+
+// Image Widget
+// -------------------------------------------
+
+.imagewidget__image-title {
+    font-size: @font-swatch3-font-size;
+    line-height: @font-swatch3-line-height;
+    font-weight: @font-swatch3-font-weight;
+    font-family: @font-swatch3-font-family;
+}
+
 
 // Profile Widgets on Footer
 // -------------------------------------------
@@ -542,6 +564,9 @@ button.navigation-toggle {
 .template-footer__column2.col2 .tweet-item {
     text-align: left;
 }
+
+
+
 
 // -------------------------------------------
 // 2. #FLEXBOX MIXINS
