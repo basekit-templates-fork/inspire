@@ -79,9 +79,9 @@
             "letter-spacing": "0px"
         },
         "font3": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "22px",
-            "font-weight": "400",
+            "font-weight": "700",
             "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
