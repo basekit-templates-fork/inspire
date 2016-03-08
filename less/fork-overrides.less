@@ -46,6 +46,14 @@ button.navigation-toggle {
     margin: 50px auto;
 }
 
+.bk-pt-default .container {
+    padding-top: 0;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
 
 // Homepage Signup Form in Header & Profile Signup Form in Footer
 // --------------------------------------------------------------
@@ -80,7 +88,10 @@ button.navigation-toggle {
 }
 
 .feature__headline {
-    max-width: 50%;
+    max-width: 60%;
+    @media @tablet {
+        max-width: 100%;
+    }
 }
 
 // Profile Form in Footer
