@@ -1,7 +1,7 @@
 {
     "name":"Inspire",
     "thumbnail":"thumbnail.png",
-    "screenshot":"screenshot.jpg",
+    "screenshot":"inspire-screenshot.jpg",
     "pageTypes":["home", "donate"],
     "templateType":"standard",
     "widgetVersion":2,
